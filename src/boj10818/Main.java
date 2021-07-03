@@ -35,7 +35,7 @@ public class Main {
 			}
 		}
 		
-		bw.write(min+" "+max);
+		bw.write(min+" "+max); 
 		bw.flush();
 		br.close();
 		bw.close();

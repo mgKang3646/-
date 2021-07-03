@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 import java.io.StringReader;
 
 public class Main {
-
+	// String을 이용한 풀이
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

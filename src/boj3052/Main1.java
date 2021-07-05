@@ -12,7 +12,7 @@ public class Main1 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
 		
-		// HashSetÀº ³»ºÎ¿¡¼­ Áßº¹µÇ´Â °ªÀ» Á¦°ÅÇÑ´Ù. ±×·¯¹Ç·Î HashSet ÀÚ·á±¸Á¶´Â Áßº¹°ª Á¦°Å¿¡ Àß »ç¿ëµÈ´Ù.
+		// HashSetì€ ë‚´ë¶€ì—ì„œ ì¤‘ë³µê°’ì„ ì œê±°í•¨. ê·¸ëŸ¬ë¯€ë¡œ HashSetì„ ì´ìš©í•˜ì—¬ ì¤‘ë³µì œê±° ê°€ëŠ¥
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

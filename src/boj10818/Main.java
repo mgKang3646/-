@@ -26,7 +26,7 @@ public class Main {
 		for(int i =0; i<count-1; i++) {
 			value = Integer.parseInt(stz.nextToken());
 			
-			if(value > max ) { // * ºñ±³¿¬»êÀÚ¸¦ ÇÒ ¶§´Â ¹İµå½Ã º¯¼ö°¡ ÃÊ±âÈ­µÈ »óÅÂ¿©¾ß ÇÑ´Ù. 
+			if(value > max ) { // ë¹„êµì—°ì‚°ìì˜ í”¼ì—°ì‚°ìëŠ” ì´ˆê¸°í™” ìƒíƒœì—¬ì•¼ í•¨
 				max = value;
 			}else {
 				if(value < min) {

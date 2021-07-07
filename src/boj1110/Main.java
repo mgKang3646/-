@@ -3,9 +3,7 @@ package boj1110;
 import java.util.Scanner;
 
 public class Main {
-	// 다른 애들 풀이와 비교하여 정리
-	//https://st-lab.tistory.com/42
-	//https://st-lab.tistory.com/41
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	

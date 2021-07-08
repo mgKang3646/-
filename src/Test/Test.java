@@ -7,17 +7,12 @@ public class Test {
 	
 	public static void main(String[] args) throws IOException {
 		
-		int data = System.in.read();
-		System.out.println(data);
+		byte[] bytes = new byte[3];
+		System.in.read(bytes);
 		
-		String stringData = "안녕";
-		System.out.println(stringData);
+		String result = new String(bytes);
 		
-		byte[] bytes = stringData.getBytes();
-		
-		for(byte value : bytes) {
-			System.out.println(value);
-		}
+		System.out.println(result);
 		
 	}
 

@@ -11,7 +11,6 @@ public class Main1 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		
 		//  HashSet은 내부에서 중복값을 제거함. 그러므로 HashSet을 이용하여 중복제거 가능
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

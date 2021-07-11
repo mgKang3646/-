@@ -8,11 +8,9 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		String data = sc.next();
-		String alphabet = null;
 		
-		for(int i = 'a'; i<'z'; i++) {
-			alphabet = (char)i +"";
-			int value = data.indexOf(alphabet);
+		for(char c ='a'; c <= 'z'; c++) {
+			int value = data.indexOf(c);
 			System.out.print(value+ " ");	
 		}
 	}

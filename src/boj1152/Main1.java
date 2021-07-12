@@ -26,8 +26,8 @@ public class Main1 {
 			if(currentChar == 10) {
 				if(preChar != 32) {
 					count++;
-					break;
 				}
+				break;
 			}
 			preChar = currentChar;
 		}

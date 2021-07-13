@@ -49,7 +49,4 @@ public class Main1 {
 		else return false;
 		
 	}
-	
-	
-
 }

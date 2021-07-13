@@ -12,7 +12,6 @@ public class Main1 {
 		
 		for(int i = 0; i<str.length(); i++) {
 			nWord++;
-			
 			if(i < str.length()-1) {
 				i = searchWord(i,str);
 			}

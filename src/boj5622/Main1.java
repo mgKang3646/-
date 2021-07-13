@@ -11,7 +11,6 @@ public class Main1 {
 		int timeForCall = 0;
 		
 		for(int i =0; i < data.length(); i++) {
-			System.out.println(data.charAt(i));
 			timeForCall += swtichCharToNum(data.charAt(i))+1;
 		}
 		System.out.println(timeForCall);
@@ -29,7 +28,6 @@ public class Main1 {
 		else if(ch < 91) value = 9;
 		else value = 0;
 		
-		System.out.println(value);
 		return value;
 	}
 

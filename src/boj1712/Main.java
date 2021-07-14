@@ -10,12 +10,13 @@ public class Main {
 		int B = sc.nextInt();
 		int C = sc.nextInt();
 		
-		int breakEvenPoint = A / (C - B) + 1;
-		
-		if(breakEvenPoint > 0) {
+		if( C > B ) {
+			int breakEvenPoint = A / (C - B) + 1;
 			System.out.println(breakEvenPoint);
-		}else {
-			System.out.println(-1);
 		}
+		
+		else {
+			System.out.println(-1);
+		}	
 	}
 }

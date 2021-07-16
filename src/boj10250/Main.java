@@ -1,4 +1,4 @@
-package boj2869;
+package boj10250;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,27 +7,37 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Main1 {
+public class Main {
 
 	public static void main(String[] args) throws IOException {
-		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
 		StringTokenizer stz;
 		
 		stz = new StringTokenizer(br.readLine()," ");
+		int testcase = Integer.parseInt(stz.nextToken());
 		
-		int A = Integer.parseInt(stz.nextToken());
-		int B = Integer.parseInt(stz.nextToken());
-		int V = Integer.parseInt(stz.nextToken());
-		
-		int days = ( V - B ) / ( A - B );
-		
-		if( ( V - B )% (A - B) != 0) {
-			days++;
+		for(int i=0; i<testcase; i++) {
+			stz = new StringTokenizer(br.readLine()," ");
+			int H = Integer.parseInt(stz.nextToken());
+			int W = Integer.parseInt(stz.nextToken());
+			int N = Integer.parseInt(stz.nextToken());
+			
+			int layer = N%H;
+			int number = N/H+1;
+
+			if(N%H == 0) {
+				layer = H;
+				number -= 1;
+			}
+			
+			if(number < 10) {
+				bw.write(layer + "0"+ number +"\n");
+			}else {
+				bw.write(layer + "" + number +"\n");
+			}
 		}
-	
-		bw.write(days+"");
 		bw.flush();
 		bw.close();
 		br.close();

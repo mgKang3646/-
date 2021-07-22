@@ -24,6 +24,7 @@ public class Main1 {
 		int yMin = Math.min(y, h-y);
 		
 		bw.write(Math.min(xMin, yMin)+"");
+		
 		bw.flush();
 		bw.close();
 		br.close();

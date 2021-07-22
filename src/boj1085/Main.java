@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
-
+	// 수학에 알고리즘을 맞추지 말고, 알고리즘에 수학을 곁들여라.
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

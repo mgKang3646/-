@@ -14,7 +14,5 @@ public class Main {
 
 		System.out.printf("%.6f\n",pi*r*r);
 		System.out.printf("%.6f\n",taxiPi*r*r);
-
 	}
-
 }

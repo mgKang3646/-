@@ -16,20 +16,26 @@ public class Main {
 	private static int[][] people;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		
 		createObjects();
-		makePeopleArr();
-		setPeopleArr();
-		getRank();
-		printRank();
-		closeIO();
-		
+		createPeopleArr();
+		processRank();
 	}
 	
 	public static void createObjects(){
 		 br = new BufferedReader(new InputStreamReader(System.in));
 		 bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		 sb = new StringBuilder();
+	}
+	
+	public static void createPeopleArr() throws NumberFormatException, IOException {
+		makePeopleArr();
+		setPeopleArr();
+	}
+	
+	public static void processRank() throws IOException {
+		getRank();
+		printRank();
+		closeIO();
 	}
 	
 	public static void makePeopleArr() throws NumberFormatException, IOException{

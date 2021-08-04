@@ -16,6 +16,8 @@ public class Main2 {
 	public static void main(String[] args) throws IOException { // 퀵정렬 이용
 		makeArr();
 		initializeArr();
+		System.out.print("원본 : ");
+		printArr();
 		quickSort(0,arr.length-1);
 		printArr();
 	}
@@ -33,7 +35,7 @@ public class Main2 {
 		for(int i=0; i<arr.length;i++) {
 			arr[i] = Integer.parseInt(br.readLine());
 		}
-		suffle();
+		//suffle();
 	}
 	
 	public static void quickSort(int left, int right) {
@@ -70,11 +72,10 @@ public class Main2 {
 	
 	public static void printArr() throws IOException {
 		for(int value : arr) {
-			sb.append(value).append("\n");
+			sb.append(value).append(" ");
 		}
+		sb.append("\n");
 		bw.write(sb.toString());
 		bw.flush();
-		bw.close();
-		br.close();
 	}
 }

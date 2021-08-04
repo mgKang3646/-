@@ -37,28 +37,37 @@ public class Main3 {
 			mergeSort(left,center);
 			mergeSort(center+1,right);
 			
-			int[] buff = new int[right-left+1]; // arr.length면 만약 arr.length(N)가 졸라게 크면 계속 그만큼을 반복적으로 만들어주어야 한다. O(N^2) right-left+1 이렇게 크기를 제한하는게 중요
-			int buffSize = 0;
-			int buffCount = 0;
-			int arrCount = left;
-			int i = 0;
+			applyMerge(left,right);
+		}
 			
-			while(arrCount <= center) {
-				buff[buffSize++] = arr[arrCount++];
-			}
-			
-			for(i=left;i<=right;i++) {
-				if(buffCount < buffSize && arrCount <= right) {
-					arr[i] = buff[buffCount] < arr[arrCount] ? buff[buffCount++] : arr[arrCount++];
-				}else {
-					break;
-				}
-			}
-			while(buffCount < buffSize) {
-				arr[i++] = buff[buffCount++];
+	}
+	
+	public static void applyMerge(int left, int right) {
+		int[] buff = new int[right-left+1]; // 임시 배열 생성
+		
+		int center = (left+right)/2;	
+		
+		int buffSize = 0;
+		int buffCount = 0;
+		int arrCount = left;
+		int i = 0;
+		
+		while(arrCount <= center) {
+			buff[buffSize++] = arr[arrCount++];
+		}
+		
+		for(i=left;i<=right;i++) {
+			if(buffCount < buffSize && arrCount <= right) {
+				arr[i] = buff[buffCount] < arr[arrCount] ? buff[buffCount++] : arr[arrCount++];
+			}else {
+				break;
 			}
 		}
+		while(buffCount < buffSize) {
+			arr[i++] = buff[buffCount++];
+		}
 	}
+	
 	
 	public static void printArr() {
 		sb = new StringBuilder();

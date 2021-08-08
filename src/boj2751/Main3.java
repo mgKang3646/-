@@ -68,7 +68,6 @@ public class Main3 {
 		}
 	}
 	
-	
 	public static void printArr() {
 		sb = new StringBuilder();
 		for( int value : arr ) {

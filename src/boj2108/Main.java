@@ -91,36 +91,38 @@ public class Main {
 		return arr[arr.length/2];
 	}
 	
+	//최빈값
 	public static int getMaxFrequencyValue() {
-		int beforeValue = MAX+1;
-		int count = 0;
-		int maxCount = 0;
-		
-		int[] maxValueArr = new int[arr.length];
-		int maxValueArrPointer = 0;
+		int minValue = MAX+1;
+		int maxValue = -MAX-1;
+		int[] maxFrequencyArr = new int[2*MAX + 1];
 		
 		for( int value : arr ) {
-			if(beforeValue == value) {
-				count++;
-			}
-			else {
-				count = 0;
-				beforeValue = value;
-			}
-			if( count > maxCount) {
-				maxCount = count;
-				maxValueArr = new int[arr.length];
-				maxValueArrPointer = 0;
-				maxValueArr[maxValueArrPointer++] = value;
-			}else if ( count == maxCount) {
-				maxValueArr[maxValueArrPointer++] = value;
+			maxFrequencyArr[value+MAX]++;
+			minValue = Math.min(minValue, value);
+			maxValue = Math.max(maxValue, value);
+		}
+		
+		boolean second = true;
+		int maxFrequency = 0;
+		int maxIndex = 0;
+		
+		for(int i = minValue + MAX; i <= maxValue + MAX; i++) {
+			if(maxFrequencyArr[i] > maxFrequency) {
+				maxFrequency = maxFrequencyArr[i];
+				maxIndex = i;
+				second = true;
+			}else if(maxFrequencyArr[i] == maxFrequency) {
+				if(second) {
+					maxIndex = i;
+					second = false;
+				}
 			}
 		}
 		
-		if(maxValueArr.length == 1) return maxValueArr[0];
-		else return maxValueArr[1];
+		return maxIndex - MAX;
 	}
-	
+
 	public static int getRange() {
 		return arr[arr.length-1] - arr[0];
 	}

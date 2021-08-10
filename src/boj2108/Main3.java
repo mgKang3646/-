@@ -69,7 +69,6 @@ public class Main3 {
 				arr[arrPointer++] = i - countingMax;
 			}
 		}
-	
 	}
 	
 

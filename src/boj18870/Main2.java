@@ -27,7 +27,6 @@ public class Main2 {
 		makeArr();
 		doHeapSort();
 		setHashMap();
-		print();
 		printArr();
 		closeIO();
 	}
@@ -113,15 +112,6 @@ public class Main2 {
 		sortArr[0] = tmp;
 	}
 	
-	public static void print() throws IOException {
-		sb = new StringBuilder();
-		for(int value : sortArr) {
-			sb.append(value+"").append(" ");
-		}
-		sb.append("\n");
-		bw.write(sb.toString());
-		bw.flush();
-	}
 	
 	public static void printArr() throws IOException {
 		sb = new StringBuilder();
